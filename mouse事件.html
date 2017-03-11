@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse事件</title>
+    <style>
+    div {
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    border: 10px solid red;
+  }
+    </style>
+</head>
+<body>
+   
+ <div id="test">
+   <!--<button>按钮</button>-->
+ </div>
+  <script>
+    // mouseover 事件：鼠标指针首次进入一个元素边界之内时触发，会冒泡
+
+// mouseout 事件：鼠标指针移出这个元素边界时触发，会冒泡
+
+var test = document.getElementById("test");
+test.onmouseover = function(event){
+  event.target.style.border = "3px solid #666";
+};
+test.onmouseout = function(event){
+  event.target.style.border = "none";
+};
+
+// mouseenter 事件：鼠标指针首次移动到元素范围之内时触发，不冒泡
+
+// mouseleave 事件：鼠标指针移动到元素范围之外时触发，不冒泡
+
+// var test = document.getElementById("test");
+// test.onmouseenter = function(event){
+//   event.target.style.border = "10px solid #666";
+// };
+// test.onmouseleave = function(event){
+//   event.target.style.border = "none";
+// };
+  </script>
+</body>
+
+
+
+
+
+</html>
